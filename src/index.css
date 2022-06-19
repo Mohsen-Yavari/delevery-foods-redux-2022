@@ -3,6 +3,10 @@
   src: local('B-Nazanin'), url(./font/B-NAZANIN.TTF) ;
 }
 
+:root{
+  --blue-navy:#212245;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -11,3 +15,34 @@
 }
 
 
+body {
+  background: #c41616;
+  font-family: "Istok Web", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1,
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: var(--blue-navy);
+}
+
+section {
+  padding: 60px 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  section {
+    padding: 40px 0px;
+  }
+
+  h1,
+  h2 {
+    font-size: 1.5rem;
+  }
+}
