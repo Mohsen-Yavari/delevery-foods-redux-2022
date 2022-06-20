@@ -16,7 +16,7 @@
     "react-strap": "^0.0.1",
     "reactstrap": "^9.1.1",
     "remixicon": "^2.5.0",
-    "scss": "^0.2.4",
+    "sass": "^1.52.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

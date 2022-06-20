@@ -9,10 +9,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'remixicon/fonts/remixicon.css';
 
+import { BrowserRouter as Router }  from "react-router-dom";
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-    <App />
+    <Router>
+        <App />
+     </Router>
   
 );
 
