@@ -1,0 +1,103 @@
+.home{
+
+    .home-1{
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    h5{
+        font-size: 1.5rem;
+    }
+
+    h1{
+        font-size: 2.5rem;
+        color: var(--blue-navy);
+
+        span{
+            color: var(--color-hover);
+            font-weight: bold;
+        }
+
+    }
+
+    p{
+        font-size: 1rem;
+        line-height:30px;
+        margin-bottom: 30px;
+        color:var(--gray);
+    }
+
+    img{
+        width: 80%;
+    }
+
+    .hero-btn{
+      
+        padding: 20px 0;
+
+        .order__btn,.all-foods-btn{
+            border: none;
+            outline: none;
+            background-color:var(--color-hover);
+            padding: 10px;
+            border-radius:5px;
+            color:#ffffff;
+            width: 20%;
+            font-size: 18px;
+
+            &:hover{
+                color: var(--color-hover);
+                background: #fff;
+                -webkit-box-shadow: 0px 0px 15px -4px #000000; 
+                box-shadow: 0px 0px 15px -4px #000000;
+            }
+        }
+
+       
+    }
+
+
+}
+}
+
+
+@media screen and (max-width: 576px){
+
+    .home{
+
+        .home-1{
+            h5{
+                font-size: 1.1rem;
+            }
+        
+            h1{
+                font-size: 2rem;
+        
+            }
+        
+            p{
+                font-size: 0.8rem;
+                line-height:25px;
+                margin-bottom: 25px;
+               
+            }
+
+            .hero-btn{
+                
+                .order__btn,.all-foods-btn{
+                    background: var(--blue-navy);
+                    font-size: 16px;
+                    width: 100%;
+                   }
+                
+            }
+            
+        
+        }
+
+      
+
+    }
+    
+
+}

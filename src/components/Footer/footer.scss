@@ -1,0 +1,163 @@
+
+.footer{
+ 
+    background:var(--bg);
+    padding: 50px ;
+
+    .logo{
+        width: calc(100% - 60%);
+    }
+
+    .footer-text{
+        color: var(--blue-navy);
+       font-size: 1rem;
+       font-weight: 100;
+       cursor: pointer;
+
+       &:hover{
+        color:var(--color-hover);
+       }
+    }
+
+    .footer-contact{
+        cursor: pointer;
+        h1{
+            font-size: 2rem;
+            color: var(--blue-navy);
+            margin-bottom: 25px;
+
+        }
+
+        p{
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        h5{
+            font-size: 1.5rem;
+            span{
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .input-counter{
+        width: 180px;
+        height: 30px;
+        background: #fff;
+
+        input{
+            border: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        button{
+            border: none;
+            background:var(--color-hover);
+            width: 40px;
+            border-radius:5px 0 0 5px;
+            height: 40px;
+
+            &:hover{
+                background:var(--blue-navy);
+            }
+
+            i{
+                color: #fff;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .footer-buttom{
+        padding-top: 40px;
+        text-align: center;
+        align-items: center;
+        padding-bottom: 0;
+
+        p{
+            color: var(--color-hover);
+        }
+    }
+}
+
+
+@media screen and (max-width: 576px){
+    .footer{
+        padding: 30px ;
+
+        .logo{
+            width: calc(100% - 80%);
+            margin-bottom: 20px;
+        }
+
+        .footer-text{
+            font-size: 0.8rem;
+        }
+
+        .footer-contact{
+            h1{
+                font-size: 1.7rem;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 0.8rem;
+        }
+        
+        h5{
+            font-size: 1.3rem;
+            span{
+                font-size: 0.8rem;
+            }
+        }
+
+    }
+
+    .button{
+        i{
+            font-size: 1rem;
+        }
+    }
+}
+}
+
+
+@media screen and (max-width: 768px){
+    .footer{
+        padding: 40px ;
+
+        .logo{
+            width: calc(100% - 70%);
+        }
+
+        .footer-text{
+            font-size: 0.9rem;
+        }
+
+        .footer-contact{
+            h1{
+                font-size: 1.8rem;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 0.9rem;
+        }
+        
+        h5{
+            font-size: 1.4rem;
+            span{
+                font-size: 0.9rem;
+            }
+        }
+
+    }
+
+    .button{
+        i{
+            font-size: 1.1rem;
+        }
+    }
+}
+}
+
