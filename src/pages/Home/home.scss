@@ -132,7 +132,37 @@
             border-radius: 5px;
             color:var(--color-hover);
         }
-    
+       
+   
+    }
+
+   
+}
+
+  //why-react
+  .why{
+    .why__testy-react{
+        
+        text-align: center;
+        align-items: center;
+        padding-top: 25%;
+
+        .teasty{
+            font-size: 2.2rem;
+            font-weight: 100;
+            margin-bottom: 30px;
+            
+            span{
+                font-weight: bold;
+                color: var(--color-hover);
+            }
+        }
+
+        p{
+            font-size: 15px;
+            line-height:25px;
+            color: var(--gray);
+        }
     }
 }
 }

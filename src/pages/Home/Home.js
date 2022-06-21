@@ -20,7 +20,8 @@ import products from "../../assets/fake-data/products";
 
 import ProductCart from "../../components/Ui/product-cart/ProductCart";
 
-
+// whyImg section
+import whyImg from "../../assets/images/location.png";
 
 
 const featureData =[
@@ -178,6 +179,65 @@ const Home = () => {
 
             </div>
             </div>
+            </section>
+
+
+                {/* whyImg section */}
+            <section>
+                <div className="container why">
+                    <div className="row">
+                        <div className="col-sm-12 col-md-6 col-lg-6">
+                            <div className="why__testy-react">
+                                <h2 className="teasty">چرا <span>غذای</span> ما؟؟؟؟؟؟</h2>
+                                <p>
+                                لورم ایپسوم متن ساختگی با تولید
+                                 سادگی نامفهو
+                                 م از صنعت چاپ، و با استفاده از ط
+                                 راحان گرافیک است، چاپگرها و متون 
+                                 بلکه روزنامه و مجله در ستون و سط
+                                 رآنچنان که لازم است، و برای شرایط
+                                 
+                                  فعلی تکنولوژی مورد نیاز، و کارب
+                                 ردهای متنوع با هدف بهبود ابزارها
+                                 ی کاربردی می باشد، کتابهای زیادی 
+                                 در شصت و سه درصد گذشته حال و آین
+                                 ده، شناخت فراوان جامعه و متخصصان 
+                                 را می طلبد، تا با نرم افزارها شن
+                                 
+                                 اخت بیشتری را برای طراحان رایانه 
+                                 ای علی الخصوص طراحان خلاقی، و فره
+                                 نگ پیشرو در زبان فارسی ایجاد کرد،
+                                  در این صورت می توان امید داشت ک
+                                 ه تمام و دشواری موجود در ارائه ر
+                                 اهکارها، و شرایط سخت تایپ به پای
+                                 ان رسد و زمان مورد نیاز شامل حرو
+                                 
+                                 فچینی دستاوردهای اصلی، و جوابگوی
+                                  سوالات پیوسته اهل دنیای موجود طر
+                                 احی اساسا مورد استفاده قرار گیرد.
+                                </p>
+
+                                     
+                            </div>
+                        </div>
+                        <div className="col-sm-12 col-md-6 col-lg-6">
+                        <img src={whyImg} alt=""className="w-100" />
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+                {/* hot pitza section */}
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12 text-center">
+                            <h1>پیتزای داغ</h1>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             
