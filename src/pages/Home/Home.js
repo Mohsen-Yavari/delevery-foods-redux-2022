@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
 import "./home.scss";
 
 import heroImg from "../../assets/images/hero.png";
@@ -46,6 +46,36 @@ const featureData =[
 
 
 const Home = () => {
+
+    const [category,setCategory] = useState("ALL");
+    const [allProducts,setAllProducts] = useState(products);
+
+
+    useEffect (() => {
+        if(category === "ALL"){
+            setAllProducts(products)
+        }
+
+        if(category === "برگر"){
+            const filterProducts = products.filter(item => item.category === 
+                "برگر")
+
+                setAllProducts(filterProducts);
+        }
+        if(category === "پیتزا"){
+            const filterProducts = products.filter(item => item.category === 
+                "پیتزا")
+
+                setAllProducts(filterProducts);
+        }
+        if(category === "نان"){
+            const filterProducts = products.filter(item => item.category === 
+                "نان")
+
+                setAllProducts(filterProducts);
+        }
+    },[])
+
     return (
         <div className="container home">
             <div className="row home-1">

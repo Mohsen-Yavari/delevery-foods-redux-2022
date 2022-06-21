@@ -16,8 +16,8 @@ const ProductCart = (props) => {
 
             <div className="product-countact">
                 <h5><Link to={`/foods/${id}`}>{title}</Link></h5>
-                <div>
-                    <span className="product__price">{price}تومان</span>
+                <div className="d-flex align-items-center justify-content-between">
+                    <span className="product__price">{price}<span>تومان</span></span>
                     <button className="addToCart__btn">اضافه کردن</button>
                 </div>
             </div>
