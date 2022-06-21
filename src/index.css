@@ -6,7 +6,7 @@
 :root{
   --blue-navy:#212245;
   --bg:#fde4e4;
-  --color-hover:rgba(228,44,100,1);
+  --color-hover: #df2020;
   --gray:#6b778d;
 }
 
@@ -19,8 +19,8 @@
 
 
 body {
-  background: #c41616;
-  font-family: "Istok Web", sans-serif;
+
+  /* font-family: "Istok Web", sans-serif; */
 }
 
 a {
@@ -29,9 +29,12 @@ a {
 }
 
 h1,
-h2 {
-  font-size: 2.1rem;
-  font-weight: 600;
+h2,
+h3,
+h4,
+h5,h6 {
+ 
+
   color: var(--blue-navy);
 }
 

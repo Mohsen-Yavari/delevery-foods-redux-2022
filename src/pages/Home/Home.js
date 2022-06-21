@@ -11,6 +11,18 @@ import featureImg01 from "../../assets/images/service-01.png";
 import featureImg02 from "../../assets/images/service-02.png";
 import featureImg03 from "../../assets/images/service-03.png";
 
+  //papular-section
+import foodCategoryImg01 from "../../assets/images/hamburger.png";
+import foodCategoryImg02 from "../../assets/images/pizza.png";
+import foodCategoryImg03 from "../../assets/images/bread.png";
+
+import products from "../../assets/fake-data/products";
+
+import ProductCart from "../../components/Ui/product-cart/ProductCart";
+
+
+
+
 const featureData =[
     {
         title:"سریع ترین خدمات",
@@ -76,9 +88,9 @@ const Home = () => {
                         </div>
                             {
                                 featureData.map((item,index)=>(
-                                    <div className="col-sm-12 col-md-6 col-lg-4  text-center home-3">
+                                    <div className="col-sm-12 col-md-6 col-lg-4  text-center home-3 mt-5" key={index}>
                                         <div className="feature-item">
-                                            <img src={item.imgUrl} alt="" />
+                                            <img src={item.imgUrl} alt="" className="w-50 mb-3" />
                                             <h5>{item.title}</h5>
                                             <p>{item.desc}</p>
                                         </div>
@@ -89,6 +101,38 @@ const Home = () => {
                     </div>
                 </div>
             </section>
+
+            
+            {/* PapularFoods section */}
+            <section>
+            <div className="container pupular">
+            <div className="row">
+            <div className="col-lg-12 text-center">
+                <h2>معروف ترین ها</h2>
+            </div>
+
+            <div className="col-lg-12">
+                <div className="food__category w-100  d-flex align-items-center justify-content-center gap-5">
+                    <button className="all__btn foodBtnActive">همه</button>
+                    <button className=""><img src={foodCategoryImg01} alt="" />برگر</button>
+                    <button><img src={foodCategoryImg02} alt="" />پیتزا</button>
+                    <button><img src={foodCategoryImg03} alt="" />نان</button>
+                </div>
+            </div>
+                
+                {
+                    products.map((item)=>(
+                        <div className="col-sm-6 col-md-4 col-lg-3 mt-5 " key={item.id}>
+                             <ProductCart item={item} />
+                        </div>
+                    ))
+                }
+           
+
+            </div>
+            </div>
+            </section>
+
             
         </div>
         

@@ -27,7 +27,7 @@ const products = [
   {
     id: "01",
     title: "چیکن برگر",
-    price: 24.0,
+    price: 24,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
@@ -39,7 +39,7 @@ const products = [
   {
     id: "02",
     title: "پیتزا سبزیجات",
-    price: 115.0,
+    price: 115,
     image01: product_02_image_01,
     image02: product_02_image_02,
     image03: product_02_image_03,
@@ -51,7 +51,7 @@ const products = [
   {
     id: "03",
     title: "دبل چیز مارگاریتا",
-    price: 110.0,
+    price: 110,
     image01: product_03_image_01,
     image02: product_03_image_02,
     image03: product_03_image_03,
@@ -63,7 +63,7 @@ const products = [
   {
     id: "04",
     title: "غذای مکزیکی",
-    price: 110.0,
+    price: 110,
     image01: product_04_image_01,
     image02: product_04_image_02,
     image03: product_04_image_03,
@@ -75,7 +75,7 @@ const products = [
   {
     id: "05",
     title: "چیز برگر",
-    price: 24.0,
+    price: 24,
     image01: product_05_image_01,
     image02: product_05_image_02,
     image03: product_05_image_03,
@@ -86,7 +86,7 @@ const products = [
   {
     id: "06",
     title: "رویال چیز برگر",
-    price: 24.0,
+    price: 24,
     image01: product_01_image_01,
     image02: product_01_image_02,
     image03: product_01_image_03,
@@ -98,7 +98,7 @@ const products = [
   {
     id: "07",
     title: "پیتزا مخلوط",
-    price: 115.0,
+    price: 115,
     image01: product_02_image_02,
     image02: product_02_image_01,
     image03: product_02_image_03,
@@ -110,7 +110,7 @@ const products = [
   {
     id: "08",
     title: "پیتزا پنیر",
-    price: 110.0,
+    price: 110,
     image01: product_03_image_02,
     image02: product_03_image_01,
     image03: product_03_image_03,
@@ -122,7 +122,7 @@ const products = [
   {
     id: "09",
     title: "پیتزا قارچ",
-    price: 110.0,
+    price: 110,
     image01: product_04_image_02,
     image02: product_04_image_01,
     image03: product_04_image_03,
@@ -146,7 +146,7 @@ const products = [
   {
     id: "11",
     title: "نان خانگی ",
-    price: 35.0,
+    price: 35,
     image01: product_06_image_01,
     image02: product_06_image_02,
     image03: product_06_image_03,
@@ -158,7 +158,7 @@ const products = [
   {
     id: "12",
     title: "نان خوش عطر ",
-    price: 35.0,
+    price: 35,
     image01: product_06_image_02,
     image02: product_06_image_01,
     image03: product_06_image_03,
@@ -170,7 +170,7 @@ const products = [
   {
     id: "13",
     title: "نان لقمه ",
-    price: 35.0,
+    price: 35,
     image01: product_06_image_03,
     image02: product_06_image_02,
     image03: product_06_image_03,
