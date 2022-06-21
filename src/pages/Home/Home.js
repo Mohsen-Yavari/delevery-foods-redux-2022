@@ -3,6 +3,34 @@ import "./home.scss";
 
 import heroImg from "../../assets/images/hero.png";
 
+//category 
+import Category from "../../components/Ui/category/Category";
+
+//featureItem 
+import featureImg01 from "../../assets/images/service-01.png";
+import featureImg02 from "../../assets/images/service-02.png";
+import featureImg03 from "../../assets/images/service-03.png";
+
+const featureData =[
+    {
+        title:"سریع ترین خدمات",
+        imgUrl:featureImg01,
+        desc:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+    },
+    {
+        title:"بهتریم کیفیت  ",
+        imgUrl:featureImg02,
+        desc:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+
+        
+    },
+    {
+        title:"  ضمانت برگشت وجه",
+        imgUrl:featureImg03,
+        desc:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ"
+
+    }
+]
 
 
 const Home = () => {
@@ -35,9 +63,35 @@ const Home = () => {
             </div>
 
           
-             
+            <section>
+                <Category />
+            </section>
+
+            <section>
+                <div className="container">
+                    <div className="row ">
+                        <div className="col-lg-12 text-center home-3">
+                            <h5>چه خدماتی ارایه میدهیم؟</h5>
+                            <h2>در خانه و محل کار فقط با<span>یک کلیک</span></h2>
+                        </div>
+                            {
+                                featureData.map((item,index)=>(
+                                    <div className="col-sm-12 col-md-6 col-lg-4  text-center home-3">
+                                        <div className="feature-item">
+                                            <img src={item.imgUrl} alt="" />
+                                            <h5>{item.title}</h5>
+                                            <p>{item.desc}</p>
+                                        </div>
+                                    </div>
+                                ))
+                            }
+     
+                    </div>
+                </div>
+            </section>
             
         </div>
+        
     );
 };
 

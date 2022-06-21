@@ -1,4 +1,5 @@
 import React from 'react';
+import "./category.scss";
 
 import categoryImg01 from "../../../assets/images/category-01.png";
 import categoryImg02 from "../../../assets/images/category-02.png";
@@ -31,7 +32,7 @@ const Category = () => {
                 {
                     categoryData.map((item,index)=>(
                         <div className="col-sm-6 col-md-4 col-lg-3">
-                            <div className="category-item" key={index}>
+                            <div className="category-item text-center" key={index}>
                                 <img src={item.imgUrl} alt="" />
                                 <p>{item.display}</p>
                             </div>
@@ -39,8 +40,9 @@ const Category = () => {
                     ))
                 }
             </div>
-            
+         
         </div>
+     
     );
 };
 
