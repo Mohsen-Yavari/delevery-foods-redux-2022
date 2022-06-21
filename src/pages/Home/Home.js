@@ -53,28 +53,32 @@ const Home = () => {
 
     useEffect (() => {
         if(category === "ALL"){
-            setAllProducts(products)
+            setAllProducts(products);
         }
 
         if(category === "برگر"){
-            const filterProducts = products.filter(item => item.category === 
-                "برگر")
+            const filteredProducts = products.filter(
+                (item) => item.category === "برگر"
+                );
 
-                setAllProducts(filterProducts);
+                setAllProducts(filteredProducts);
         }
         if(category === "پیتزا"){
-            const filterProducts = products.filter(item => item.category === 
-                "پیتزا")
+            const filteredProducts = products.filter(
+                (item) => item.category === "پیتزا"
+                );
 
-                setAllProducts(filterProducts);
+                setAllProducts(filteredProducts);
         }
         if(category === "نان"){
-            const filterProducts = products.filter(item => item.category === 
-                "نان")
+            const filteredProducts = products.filter(
+                (item) => item.category === "نان"
+                );
 
-                setAllProducts(filterProducts);
+                setAllProducts(filteredProducts);
         }
-    },[])
+        
+    },[category])
 
     return (
         <div className="container home">
@@ -143,15 +147,28 @@ const Home = () => {
 
             <div className="col-lg-12">
                 <div className="food__category w-100  d-flex align-items-center justify-content-center gap-5">
-                    <button className="all__btn foodBtnActive">همه</button>
-                    <button className=""><img src={foodCategoryImg01} alt="" />برگر</button>
-                    <button><img src={foodCategoryImg02} alt="" />پیتزا</button>
-                    <button><img src={foodCategoryImg03} alt="" />نان</button>
+                    <button className={`all__btn ${category === "ALL" ? 
+                    "foodBtnActive" : ""}`} 
+                    onClick={()=>
+                    setCategory("ALL")
+                    }>همه</button>
+                    <button className={`all__btn ${category === "برگر" ? 
+                    "foodBtnActive" : ""}`} 
+                   onClick={()=>setCategory("برگر")}
+                    ><img src={foodCategoryImg01} alt="" />برگر</button>
+                    <button className={`all__btn ${category === "پیتزا" ? 
+                    "foodBtnActive" : ""}`}
+                       onClick={()=>setCategory("پیتزا")}
+                    ><img src={foodCategoryImg02} alt="" />پیتزا</button>
+                    <button className={`all__btn ${category === "نان" ? 
+                    "foodBtnActive" : ""}`}
+                    onClick={()=>setCategory("نان")}
+                    ><img src={foodCategoryImg03} alt="" />نان</button>
                 </div>
             </div>
                 
                 {
-                    products.map((item)=>(
+                    allProducts.map((item)=>(
                         <div className="col-sm-6 col-md-4 col-lg-3 mt-5 " key={item.id}>
                              <ProductCart item={item} />
                         </div>
