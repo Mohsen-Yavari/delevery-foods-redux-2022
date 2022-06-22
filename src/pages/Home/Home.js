@@ -23,6 +23,7 @@ import ProductCart from "../../components/Ui/product-cart/ProductCart";
 // whyImg section
 import whyImg from "../../assets/images/location.png";
 
+import networkImg from "../../assets/images/network.png";
 
 const featureData =[
     {
@@ -242,7 +243,7 @@ const Home = () => {
             <section>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-12 text-center">
+                        <div className="col-lg-12 text-center mb-5">
                             <h1>پیتزای داغ</h1>
                         </div>
                         {
@@ -252,6 +253,20 @@ const Home = () => {
                                 </siv>
                             ))
                         }
+                    </div>
+                </div>
+            </section>
+
+            {/* network section */}
+            <section>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-12 col-md-6 col-lg-6">
+                          
+                        </div>
+                        <div className="col-sm-12 col-md-6 col-lg-6">
+                            <img src={networkImg} alt="" className="w-75" />
+                        </div>
                     </div>
                 </div>
             </section>
