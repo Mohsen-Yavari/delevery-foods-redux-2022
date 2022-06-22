@@ -34,16 +34,19 @@
             }
         }
     }
-
     .header__shrink {
         position: sticky;
         top: 0;
         left: 0;
-        background: #fff;
+        background: rgb(179, 14, 14);
         z-index: 99999;
         box-shadow: 5px 5px 15px -5px #fde4e4;
       }
+
+   
 }
+
+
 
 @media screen and (max-width: 576px){
     .navbar{

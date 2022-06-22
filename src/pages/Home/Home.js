@@ -269,7 +269,7 @@ const Home = () => {
                             گواهینامه ها
                             </h5>
                             <h2 className="testimonial-title mb-4">
-                                معتبرترین مدارک <span>اشپزی</span>در سطح <span>بین المللی</span>
+                                معتبرترین مدارک <span> اشپزی </span>در سطح <span>بین المللی</span>
                             </h2>
                             <p className="testimonial-desc">
                             لورم ایپسوم متن ساختگی با تولید سادگی
@@ -282,7 +282,7 @@ const Home = () => {
                           </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-6">
-                            <img src={networkImg} alt="" className="w-75" />
+                            <img src={networkImg} alt="" className="w-100 mt-5" />
                         </div>
                     </div>
                 </div>

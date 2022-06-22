@@ -1,15 +1,14 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import "./navbar.scss";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/res-logo.png";
 
 const Navbar = () => {
 
-
     return (
- <div>
-  <nav className="navbar navbar-expand-lg gradiant__bg  bg-light">
-    <div className="container">
+ <div >
+  <nav className="navbar navbar-expand-lg gradiant__bg  bg-light" >
+    <div className="container" >
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <i class="ri-menu-line"></i>
       </button>
