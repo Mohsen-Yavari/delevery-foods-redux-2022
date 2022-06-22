@@ -3,7 +3,7 @@ import "./navbar.scss";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/res-logo.png";
 
-//redux 
+// redux 
 import { useSelector } from 'react-redux/es/exports';
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
             <i class="ri-shopping-cart-2-line position-relative">
             
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              2
+              {totalQuantity}
               <span class="visually-hidden"></span>
             </span>
             </i>
