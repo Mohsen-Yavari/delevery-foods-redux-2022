@@ -23,7 +23,9 @@ import ProductCart from "../../components/Ui/product-cart/ProductCart";
 // whyImg section
 import whyImg from "../../assets/images/location.png";
 
+//testimonial section
 import networkImg from "../../assets/images/network.png";
+import TestimonialSlider from "../../components/Ui/slider/TestimonialSlider";
 
 const featureData =[
     {
@@ -257,12 +259,27 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* network section */}
+            {/* tetimonial section */}
             <section>
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12 col-md-6 col-lg-6">
-                          
+                          <div className="testimonial">
+                            <h5 className="testimonial-subTitle mb-4">
+                            گواهینامه ها
+                            </h5>
+                            <h2 className="testimonial-title mb-4">
+                                معتبرترین مدارک <span>اشپزی</span>در سطح <span>بین المللی</span>
+                            </h2>
+                            <p className="testimonial-desc">
+                            لورم ایپسوم متن ساختگی با تولید سادگی
+                             نامفهوم از صنعت چاپ و با استفاده از طراحان 
+                            گرافیک است چاپگرها و متون بلکه روزنامه
+                             و مجله در ستون و سطرآنچنان که لازم است 
+                            و برای شرایط فعلی تکنولوژی مورد نیاز
+                            </p>
+                                <TestimonialSlider />
+                          </div>
                         </div>
                         <div className="col-sm-12 col-md-6 col-lg-6">
                             <img src={networkImg} alt="" className="w-75" />
