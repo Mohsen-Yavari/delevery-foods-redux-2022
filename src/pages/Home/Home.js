@@ -51,6 +51,15 @@ const Home = () => {
     const [category,setCategory] = useState("ALL");
     const [allProducts,setAllProducts] = useState(products);
 
+    // hot pitza section
+    const [hotPitzza,setHotPitzza] = useState([]);
+    
+    useState(()=>{
+        const filtredPitzza = products.filter(item =>item.category === "پیتزا")
+        const slicePitzza = filtredPitzza.slice(0,4)
+        setHotPitzza(slicePitzza)
+    },[])
+
 
     useEffect (() => {
         if(category === "ALL"){
@@ -236,6 +245,13 @@ const Home = () => {
                         <div className="col-lg-12 text-center">
                             <h1>پیتزای داغ</h1>
                         </div>
+                        {
+                            hotPitzza.map((item)=>(
+                                <siv className="col-sm-12 col-md-4 col-lg-3" key={item.id}>
+                                    <ProductCart item={item} />
+                                </siv>
+                            ))
+                        }
                     </div>
                 </div>
             </section>
