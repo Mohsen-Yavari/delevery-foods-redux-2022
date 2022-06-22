@@ -3,7 +3,12 @@ import "./navbar.scss";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/res-logo.png";
 
+//redux 
+import { useSelector } from 'react-redux/es/exports';
+
 const Navbar = () => {
+
+  const totalQuantity = useSelector(state =>state.cart.totalQuantity)
 
     return (
  <div >
