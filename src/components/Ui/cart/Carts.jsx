@@ -1,16 +1,18 @@
 import React from 'react';
 import "./carts.scss";
 import { ListGroup } from 'reactstrap';
-import CartItem from './CartItem';
+import CartItem from "./CartItem";
 import { Link } from 'react-router-dom';
 
-import {useDispatch} from "react-redux";
+import {useDispatch,useSelector} from "react-redux";
 import {cartUiActions} from "../../../store/shopping-cart/cartUiSlice";
+
 
 const Carts = () => {
 
     const dispatch = useDispatch();
-
+    const cartProducts = useSelector((state)=> state.cart.cartItems);
+    const totalAmount = useSelector((state)=> state.cart.TotalAmount);
     const toggleCart = ()=>{
         dispatch(cartUiActions.toggle());
     }
@@ -26,7 +28,17 @@ const Carts = () => {
                 </div>
 
                 <div className="cart__item-list">
-                    <CartItem />
+
+                   
+                         {cartProducts.length === 0 ? (
+                            <h6 className="text-center mt-5">ایتمی نیست</h6>
+                          ) : (
+                            cartProducts.map((item, index) => (
+                              <CartItem item={item} key={index} />
+                            ))
+                          )}
+                    
+                   
                     
                  
                 </div>

@@ -22,7 +22,8 @@ const Navbar = () => {
   <nav className="navbar navbar-expand-lg gradiant__bg  bg-light" >
     <div className="container" >
       <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="ri-menu-line"></i>
+     <i className="ri-menu-line" />
+
       </button>
       <div className="collapse navbar-collapse text-center" id="navbarSupportedContent">
   
@@ -31,18 +32,20 @@ const Navbar = () => {
           
            <li className="nav-item">
             <Link to="/login" className="nav-link active" aria-current="page" >
-            <i class="ri-user-line"></i>
+           <i className="ri-user-line" />
+
             </Link>
           </li> 
            <li className="nav-item">
             <Link to="" className="nav-link active" aria-current="page" >
           
           <span className="icon__cart" onClick={toggleCart}>
-          <i class="ri-shopping-cart-2-line position-relative">
+          <i className="ri-shopping-cart-2-line position-relative">
             
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {totalQuantity}
-              <span class="visually-hidden"></span>
+            <span className="visually-hidden" />
+
             </span>
             </i>
           </span>

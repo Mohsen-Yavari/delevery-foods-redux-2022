@@ -8,10 +8,10 @@ const cartUiSlice = createSlice({
 
     reducers:{
         toggle(state){
-            state.cartIsVisible = !state.cartIsVisible
-        }
-    }
-})
+            state.cartIsVisible = !state.cartIsVisible;
+        },
+    },
+});
 
 export const cartUiActions = cartUiSlice.actions;
 export default cartUiSlice;

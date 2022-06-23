@@ -31,8 +31,8 @@ const Category = () => {
             <div className="row">
                 {
                     categoryData.map((item,index)=>(
-                        <div className="col-sm-6 col-md-4 col-lg-3">
-                            <div className="category-item text-center" key={index}>
+                        <div className="col-sm-6 col-md-4 col-lg-3" key={index}>
+                            <div className="category-item text-center" >
                                 <img src={item.imgUrl} alt="" />
                                 <p>{item.display}</p>
                             </div>

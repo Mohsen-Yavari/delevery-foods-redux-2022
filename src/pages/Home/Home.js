@@ -95,10 +95,11 @@ const Home = () => {
 
     return (
         <div className="container home">
+       
             <div className="row home-1">
                 <div className="col-sm-12 col-md-6 col-lg-6">
                     <h5 className="mb-4">لورم ایپسوم متن ساختگی با تولید</h5>
-                    <h1 className="mb-3">همش  <span> دلت<i class="ri-heart-fill"></i></span>بهئونه میگیره؟<span>غذای خوشمزه</span> رو امتحان کن</h1>
+                    <h1 className="mb-3">همش  <span> دلت<i className="ri-heart-fill"></i></span>بهئونه میگیره؟<span>غذای خوشمزه</span> رو امتحان کن</h1>
                     <p>لورم ایپسوم متن ساختگی با تولید
                      سادگی نامفهوم از صنعت چاپ و با استفاده 
                     از طراحان گرافیک است چاپگرها و متون بلکه
@@ -250,9 +251,9 @@ const Home = () => {
                         </div>
                         {
                             hotPitzza.map((item)=>(
-                                <siv className="col-sm-12 col-md-4 col-lg-3" key={item.id}>
+                                <div className="col-sm-12 col-md-4 col-lg-3" key={item.id}>
                                     <ProductCart item={item} />
-                                </siv>
+                                </div>
                             ))
                         }
                     </div>
