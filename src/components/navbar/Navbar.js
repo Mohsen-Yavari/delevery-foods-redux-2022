@@ -3,13 +3,20 @@ import "./navbar.scss";
 import { Link } from 'react-router-dom';
 import logo from "../../assets/images/res-logo.png";
 
+
+
 // redux 
-import { useSelector } from 'react-redux/es/exports';
+import { useSelector,useDispatch } from 'react-redux';
+import {cartUiActions} from "../../store/shopping-cart/cartUiSlice";
 
 const Navbar = () => {
 
-  const totalQuantity = useSelector(state =>state.cart.totalQuantity)
+  const totalQuantity = useSelector(state =>state.cart.totalQuantity);
+  const dispatch = useDispatch();
 
+  const toggleCart =()=>{
+    dispatch(cartUiActions.toggle())
+  }
     return (
  <div >
   <nav className="navbar navbar-expand-lg gradiant__bg  bg-light" >
@@ -30,13 +37,16 @@ const Navbar = () => {
            <li className="nav-item">
             <Link to="" className="nav-link active" aria-current="page" >
           
-            <i class="ri-shopping-cart-2-line position-relative">
+          <span className="icon__cart" onClick={toggleCart}>
+          <i class="ri-shopping-cart-2-line position-relative">
             
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {totalQuantity}
               <span class="visually-hidden"></span>
             </span>
             </i>
+          </span>
+            
             </Link>
           </li> 
 
