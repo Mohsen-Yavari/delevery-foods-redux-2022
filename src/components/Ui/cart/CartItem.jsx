@@ -20,7 +20,10 @@ const CartItem = ({item}) => {
         })
       );
     };
-
+    
+    const decreaseItem =()=>{
+        dispatch(cartActions.removeItem(id))
+    }
 
      return (
   
@@ -43,7 +46,7 @@ const CartItem = ({item}) => {
                             </span>
                             <span className="quantity">{quantity}</span>
                             <span className="decrease__btn" >
-                                <i class="ri-subtract-line"></i>
+                                <i class="ri-subtract-line" onClick={decreaseItem}></i>
                             </span>
                             
                         </div>
