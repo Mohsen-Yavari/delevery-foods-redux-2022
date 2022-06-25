@@ -12,10 +12,10 @@ const Carts = () => {
 
     const dispatch = useDispatch();
     const cartProducts = useSelector((state)=> state.cart.cartItems);
-    const totalAmount = useSelector((state)=> state.cart.TotalAmount);
     const toggleCart = ()=>{
         dispatch(cartUiActions.toggle());
-    }
+    };
+
     return (
         <div className="cart__container">
 

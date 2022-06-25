@@ -1,7 +1,6 @@
 
 
 import { createSlice } from "@reduxjs/toolkit";
-import { hasFormSubmit } from "@testing-library/user-event/dist/utils";
 
 const initialState = {
     cartItems: [],
@@ -18,9 +17,9 @@ const cartSlice = createSlice({
 
             //add item
             addItem(state,action){
-                const newItem = action.payload;;
-                const existingItem = state.cartItems.find((item) => item.id ===
-                    newItem.id)
+                const newItem = action.payload;
+                const existingItem = state.cartItems.find
+                ((item) => item.id === newItem.id);
                     state.totalQuantity++;
     
                     if(!existingItem){
@@ -31,13 +30,13 @@ const cartSlice = createSlice({
                             price:newItem.price,
                             quantity:1,
                             totalPrice:newItem.price
-                        })
+                        });
                     }
     
                     else{
                         existingItem.quantity++
-                        existingItem.totalPrice =Number(existingItem.totalPrice)
-                        + Number(newItem.price)
+                        existingItem.totalPrice 
+                        = Number(existingItem.totalPrice) + Number(newItem.price)
                     }
     
                     state.totalAmount = state.cartItems.reduce((total,item)=>(
