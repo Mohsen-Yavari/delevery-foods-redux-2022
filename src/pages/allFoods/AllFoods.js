@@ -6,10 +6,12 @@ import CommonSection from "../../components/Ui/common-section/CommonSection";
 import products from "../../assets/fake-data/products";
 import ProductCard from "../../components/Ui/product-cart/ProductCart";
 
-const [searchItem,setSearchItem] = useState('');
-const [productData,setProductData] = useState(products);
+import ReactPaginate from "react-paginate";
 
 const AllFoods = () => {
+    
+    const [searchItem,setSearchItem] = useState('');
+
     return (
         <Helmet title="AllFoods">
             <CommonSection title="غذاها" />
@@ -42,7 +44,15 @@ const AllFoods = () => {
 
                    
                     {
-                        products.map((item) =>(
+                        products
+                        ?.filter((item )=>{
+                            if(searchItem.value === "") return item;
+                            if(item.title
+                                .toLowerCase()
+                                .includes(searchItem.
+                                toLowerCase())) return item
+                        })
+                        .map((item) =>(
                             <div className='col-sm-12 col-md-4 col-lg-3 mt-5'  key={item.id}>
                                 <ProductCard item={item} />)
 
