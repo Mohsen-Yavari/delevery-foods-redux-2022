@@ -7,8 +7,7 @@ import {useParams} from "react-router-dom";
 import Helmet from "../../components/helmet/Helmet";
 import CommonSection from "../../components/Ui/common-section/CommonSection";
 
-import productImg from "../../assets/images/product_01.1.jpg";
-
+import ProductCart from "../../components/Ui/product-cart/ProductCart";
 const FoodDetails = () => {
 
 const {id} = useParams();
@@ -17,6 +16,10 @@ const [tab,setTab] = useState('desc');
 const product = products.find((product) => product.id === id);
 const [previImg,setPreviImg] =useState(product.image01);
 const { title, price, category, desc, image01 } = product;
+
+const relatedProduct = products.filter((item) => category === item.category);
+
+
     return (
         <Helmet title="جزییات محصول ">
             <CommonSection title={title}/>
@@ -65,48 +68,68 @@ const { title, price, category, desc, image01 } = product;
 
                         <div className="col-lg-12">
                             <div className="tabs d-flex align-items-center gap-5 py-2">
-                                <h6 className="tab__activs">توضیحات</h6>
-                                <h6>بررسی</h6>
+                                <h6 className={` ${tab === "desc" ? "tab__activs" : ""}`} onClick={()=>setTab('desc')}>
+                                    توضیحات
+                                    </h6>
+                                <h6 className={` ${tab === "rev" ? "tab__activs" : ""}`}
+                                onClick={()=>setTab('rev')}>مشخصات</h6>
                             </div>
 
-                            <div className="tab__contact">
+                            {/* //change */}
+                          {
+                            tab === "desc" ?  <div className="tab__contact">
                                 <p>{desc}</p>
-                            </div>
+                             </div> : <div className="tab__form">
+
+                                   <div className="review mb-3">
+                                     <p className="user__name mb-0">محسن یاوری</p>  
+                                     <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
+                                     <p className="feedback__text">محصولات عالی</p>  
+                                   </div>
+                                   <div className="review">
+                                     <p className="user__name mb-0">محسن یاوری</p>  
+                                     <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
+                                     <p className="feedback__text">محصولات عالی</p>  
+                                   </div>
+                                   <div className="review">
+                                     <p className="user__name mb-0">محسن یاوری</p>  
+                                     <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
+                                     <p className="feedback__text">محصولات عالی</p>  
+                                   </div>
+                                   <div className="form">
+                                       <div className="form__grop">
+                                           <input type="text" placeholder="نام خود را وارد کنید" />
+                                       </div>
+                                       <div className="form__grop">
+                                           <input type="text" placeholder="ایمیل را وارد کنید" />
+                                       </div>
+                                       <div className="form__grop">
+                                           <textarea 
+                                           rows={3}
+                                           type="text" placeholder="توضیحات" />
+                                       </div>
+       
+                                       <button type="submit" className="addToCart__btn" >ارسال</button>
+                                   </div>
+                               </div>
+                   
+                          }
+                           
+
+                   
                         </div>
 
-                        <div className="tab__form">
-
-                            <div className="review mb-3">
-                              <p className="user__name mb-0">محسن یاوری</p>  
-                              <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
-                              <p className="feedback__text">محصولات عالی</p>  
-                            </div>
-                            <div className="review">
-                              <p className="user__name mb-0">محسن یاوری</p>  
-                              <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
-                              <p className="feedback__text">محصولات عالی</p>  
-                            </div>
-                            <div className="review">
-                              <p className="user__name mb-0">محسن یاوری</p>  
-                              <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
-                              <p className="feedback__text">محصولات عالی</p>  
-                            </div>
-                            <div className="form">
-                                <div className="form__grop">
-                                    <input type="text" placeholder="نام خود را وارد کنید" />
-                                </div>
-                                <div className="form__grop">
-                                    <input type="text" placeholder="ایمیل را وارد کنید" />
-                                </div>
-                                <div className="form__grop">
-                                    <textarea 
-                                    rows={3}
-                                    type="text" placeholder="توضیحات" />
-                                </div>
-
-                                <button type="submit" className="addToCart__btn" >ارسال</button>
-                            </div>
+                        <div className="col-lg-12 mb-5 mt-5">
+                            <h2>علاقه مندی ها</h2>
                         </div>
+
+                        {
+                            relatedProduct.map(item =>(
+                                <div className="col-sm-6 col-md-4 col-lg-3">
+                                    <ProductCart item={item} />
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </section>
