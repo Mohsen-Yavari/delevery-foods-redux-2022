@@ -1,10 +1,14 @@
 import React from 'react';
 import "./foodDetails.scss";
 
+import products from "../../assets/fake-data/products";
+import {useParams} from "react-router-dom";
+import Helmet from "../../components/helmet/Helmet";
+import commonSection from "../../components/Ui/common-section/CommonSection";
 const FoodDetails = () => {
     return (
-        <div>
-            FoodDetails
+        <div className="container">
+            
         </div>
     );
 };

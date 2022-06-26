@@ -11,7 +11,18 @@ import ReactPaginate from "react-paginate";
 const AllFoods = () => {
     
     const [searchItem,setSearchItem] = useState('');
+    const [pagNumber,setPageNumber] = useState(0);
 
+    const productPerPage = 6;
+    const visitedPage = pagNumber + productPerPage;
+    const displayPage =products.slice(visitedPage,visitedPage + 
+        productPerPage);
+
+        const pageCount =Math.ceil(products.length / productPerPage);
+
+        const changePage = ({ selected }) => {
+            setPageNumber(selected);
+          };
     return (
         <Helmet title="AllFoods">
             <CommonSection title="غذاها" />
@@ -44,7 +55,7 @@ const AllFoods = () => {
 
                    
                     {
-                        products
+                        displayPage
                         ?.filter((item )=>{
                             if(searchItem.value === "") return item;
                             if(item.title
@@ -54,11 +65,21 @@ const AllFoods = () => {
                         })
                         .map((item) =>(
                             <div className='col-sm-12 col-md-4 col-lg-3 mt-5'  key={item.id}>
-                                <ProductCard item={item} />)
+                                <ProductCard item={item} />
 
                             </div>
                      
                         ))}
+
+                        <div>
+                            <ReactPaginate 
+                             pageCount={pageCount}
+                             onPageChange={changePage}
+                             previousLabel={"قبلی"}
+                             nextLabel={"بعدی"}
+                             containerClassName=" paginationBttns "
+                            />
+                        </div>
                 
                 
                

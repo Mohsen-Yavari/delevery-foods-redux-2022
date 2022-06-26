@@ -10,3 +10,38 @@
         outline: none;
     }
 }
+
+
+//pagination style
+
+.paginationBttns {
+    width: 80%;
+    height: 40px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 0.5rem;
+    list-style: none;
+    margin-top: 50px;
+    color:#fff;
+    margin-bottom: 50px;
+
+    a{
+        padding: 13px;
+        background:var(--blue-navy);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color:#fff;
+        font-weight: bold;
+
+        
+    &:hover{
+        background:var(--color-hover);
+    }
+    }
+
+  }
