@@ -63,9 +63,7 @@ const Navbar = () => {
             <Link to="/foods" className="nav-link active" aria-current="page" >غذاها</Link>
           </li> 
       
-          <li className="nav-item">
-            <Link to="/cart" className="nav-link active" aria-current="page" >کارت</Link>
-          </li>
+        
           <li className="nav-item">
             <Link to="/contact" className="nav-link active" aria-current="page" >مخاطب</Link>
           </li>

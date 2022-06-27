@@ -12,6 +12,7 @@ const Carts = () => {
 
     const dispatch = useDispatch();
     const cartProducts = useSelector((state)=> state.cart.cartItems);
+    
     const toggleCart = ()=>{
         dispatch(cartUiActions.toggle());
     };
@@ -44,7 +45,7 @@ const Carts = () => {
                 </div>
 
                 <div className="cart__bottom d-flex align-items-center justify-content-between ">
-                    <h6>مجموع قیمت :<span> 123</span></h6>
+                    <h6>  خرید امن<span> زرین پال</span></h6>
                     <button><Link to="/checkout">چک کردن</Link></button>
                 </div>
             </ListGroup>
