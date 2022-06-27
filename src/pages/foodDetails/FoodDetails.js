@@ -8,18 +8,45 @@ import Helmet from "../../components/helmet/Helmet";
 import CommonSection from "../../components/Ui/common-section/CommonSection";
 
 import ProductCart from "../../components/Ui/product-cart/ProductCart";
+
+//redux
+import {useDispatch} from "react-redux";
+import {cartActions} from "../../store/shopping-cart/cartSlice";
+
+
 const FoodDetails = () => {
 
 const {id} = useParams();
 const [tab,setTab] = useState('desc');
+const dispatch = useDispatch();
 
 const product = products.find((product) => product.id === id);
 const [previImg,setPreviImg] =useState(product.image01);
 const { title, price, category, desc, image01 } = product;
 
+
+
+
 const relatedProduct = products.filter((item) => category === item.category);
 
+const addItem = () => {
+    dispatch(
+      cartActions.addItem({
+        id,
+        title,
+        price,
+        image01,
+      })
+    );
+  };
 
+useEffect(() => {
+    setPreviImg(product.image01);
+  }, [product]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [product]);
     return (
         <Helmet title="جزییات محصول ">
             <CommonSection title={title}/>
@@ -61,7 +88,7 @@ const relatedProduct = products.filter((item) => category === item.category);
                                     {price}<span>تومان</span></span>
                                 <p>گروه: ؤ<span>{category}</span></p>
 
-                                <button className="addToCart__btn">اضافه کردن</button>
+                                <button onClick={addItem} className="addToCart__btn">اضافه کردن</button>
                             </div>
                             
                         </div>
@@ -120,12 +147,12 @@ const relatedProduct = products.filter((item) => category === item.category);
                         </div>
 
                         <div className="col-lg-12 mb-5 mt-5">
-                            <h2>علاقه مندی ها</h2>
+                            <h2 className="related__Product-title">علاقه مندی ها</h2>
                         </div>
 
                         {
                             relatedProduct.map(item =>(
-                                <div className="col-sm-6 col-md-4 col-lg-3">
+                                <div className="col-sm-6 col-md-4 col-lg-3 mb-4" key={item.id}>
                                     <ProductCart item={item} />
                                 </div>
                             ))
