@@ -29,6 +29,8 @@ const { title, price, category, desc, image01 } = product;
 
 const relatedProduct = products.filter((item) => category === item.category);
 
+
+//add item
 const addItem = () => {
     dispatch(
       cartActions.addItem({
@@ -47,6 +49,19 @@ useEffect(() => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [product]);
+
+
+  //for submit
+  const [enteredName, setEnteredName] = useState("");
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [reviewMsg, setReviewMsg] = useState("");
+
+const submitHandler = (e) => {
+    e.preventDefault();
+
+    
+  };
+
     return (
         <Helmet title="جزییات محصول ">
             <CommonSection title={title}/>
@@ -123,17 +138,30 @@ useEffect(() => {
                                      <p className="user__email mb-0">mohsenyavari713@gmail.com</p>  
                                      <p className="feedback__text">محصولات عالی</p>  
                                    </div>
-                                   <div className="form">
+                                   <div className="form" onSubmit={submitHandler}>
                                        <div className="form__grop">
-                                           <input type="text" placeholder="نام خود را وارد کنید" />
+                                           <input type="text"
+                                           placeholder="نام خود را وارد کنید"
+                                           onChange={(e) => setEnteredName(e.target.value)}
+                                           required
+                                           />
                                        </div>
                                        <div className="form__grop">
-                                           <input type="text" placeholder="ایمیل را وارد کنید" />
+                                           <input type="email" 
+                                           placeholder="ایمیل را وارد کنید" 
+                                           onChange={(e) => setEnteredEmail(e.target.value)}
+                                           required
+
+                                           />
                                        </div>
                                        <div className="form__grop">
                                            <textarea 
                                            rows={3}
-                                           type="text" placeholder="توضیحات" />
+                                           type="text" placeholder="توضیحات" 
+                                           onChange={(e) => setReviewMsg(e.target.value)}
+                                           required
+
+                                           />
                                        </div>
        
                                        <button type="submit" className="addToCart__btn" >ارسال</button>
